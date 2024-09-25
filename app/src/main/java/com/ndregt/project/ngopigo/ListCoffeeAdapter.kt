@@ -3,11 +3,11 @@ package com.ndregt.project.ngopigo
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class ListCoffeeAdapter(private val listCoffee: ArrayList<Coffee>) : RecyclerView.Adapter<ListCoffeeAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
@@ -25,22 +25,25 @@ class ListCoffeeAdapter(private val listCoffee: ArrayList<Coffee>) : RecyclerVie
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val coffee = listCoffee[position]
         holder.tvCategory.text = coffee.category
-        holder.imgPhoto.setImageResource(coffee.photo)
         holder.tvName.text = coffee.name
         holder.tvDescription.text = coffee.description
 
+        Glide.with(holder.itemView.context)
+            .load(coffee.photo)
+            .into(holder.imgPhoto)
+
         val context = holder.itemView.context
-        
+
         when (coffee.category) {
             context.getString(R.string.hot_category) -> {
-                holder.tvCategory.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.holo_orange_light))
+                holder.tvCategory.setTextColor(ContextCompat.getColor(context, android.R.color.holo_orange_light))
                 holder.imgItemCategory.setImageResource(R.drawable.ic_hot)
-                holder.imgItemCategory.setColorFilter(ContextCompat.getColor(holder.itemView.context, android.R.color.holo_orange_light))
+                holder.imgItemCategory.setColorFilter(ContextCompat.getColor(context, android.R.color.holo_orange_light))
             }
             context.getString(R.string.cold_category) -> {
-                holder.tvCategory.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.holo_blue_bright))
+                holder.tvCategory.setTextColor(ContextCompat.getColor(context, android.R.color.holo_blue_bright))
                 holder.imgItemCategory.setImageResource(R.drawable.ic_cold)
-                holder.imgItemCategory.setColorFilter(ContextCompat.getColor(holder.itemView.context, android.R.color.holo_blue_bright))
+                holder.imgItemCategory.setColorFilter(ContextCompat.getColor(context, android.R.color.holo_blue_bright))
             }
         }
 

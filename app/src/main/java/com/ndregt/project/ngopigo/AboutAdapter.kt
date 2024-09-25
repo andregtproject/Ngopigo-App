@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class AboutAdapter(private val items: List<About>) : RecyclerView.Adapter<AboutAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -21,7 +22,13 @@ class AboutAdapter(private val items: List<About>) : RecyclerView.Adapter<AboutA
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
+
         holder.icon.setImageResource(item.icon)
+
+        Glide.with(holder.itemView.context)
+            .load(item.icon)
+            .into(holder.icon)
+
         holder.text.text = item.text
         holder.itemView.setOnClickListener { item.action() }
     }

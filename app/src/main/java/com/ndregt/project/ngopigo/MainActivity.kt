@@ -8,10 +8,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.util.Locale
-import java.util.stream.Collectors
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvCoffee: RecyclerView
@@ -28,16 +30,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var searchView: SearchView
     private val list = ArrayList<Coffee>()
     private var filteredList = ArrayList<Coffee>()
+    private lateinit var listCoffeeAdapter: ListCoffeeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         searchView = findViewById(R.id.searchView)
-
         rvCoffee = findViewById(R.id.rv_coffee)
-        rvCoffee.setHasFixedSize(true)
-
         catAll = findViewById(R.id.cat_all)
         catHot = findViewById(R.id.cat_hot)
         catCold = findViewById(R.id.cat_cold)
@@ -47,16 +47,37 @@ class MainActivity : AppCompatActivity() {
         allCategory = findViewById(R.id.all_category)
         hotCategory = findViewById(R.id.hot_category)
         coldCategory = findViewById(R.id.cold_category)
-
         aboutPage = findViewById(R.id.about_page)
 
-        list.addAll(getListCoffee())
-        filteredList.addAll(list)
-        showRecyclerList()
-
+        setupRecyclerView()
+        loadCoffeeData()
         setupCategoryListeners()
         setupMenu()
         setupSearchView()
+    }
+
+    private fun setupRecyclerView() {
+        rvCoffee.setHasFixedSize(true)
+        rvCoffee.layoutManager = GridLayoutManager(this, 2)
+        listCoffeeAdapter = ListCoffeeAdapter(filteredList)
+        rvCoffee.adapter = listCoffeeAdapter
+
+        listCoffeeAdapter.setOnItemClickCallback(object : ListCoffeeAdapter.OnItemClickCallback {
+            override fun onDetailClicked(data: Coffee) {
+                showSelectedCoffee(data)
+            }
+        })
+    }
+
+    private fun loadCoffeeData() {
+        lifecycleScope.launch(Dispatchers.Default) {
+            val coffeeList = getListCoffee()
+            withContext(Dispatchers.Main) {
+                list.addAll(coffeeList)
+                filteredList.addAll(list)
+                listCoffeeAdapter.notifyDataSetChanged()
+            }
+        }
     }
 
     private fun setupSearchView() {
@@ -73,10 +94,9 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun setupMenu(){
+    private fun setupMenu() {
         aboutPage.setOnClickListener {
-            val intent = Intent(this, AboutActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, AboutActivity::class.java))
         }
     }
 
@@ -119,29 +139,34 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun filterCoffeeList(query: String) {
-        filteredList.clear()
-        if (query.isEmpty()) {
-            filteredList.addAll(list)
-        } else {
-            filteredList.addAll(list.stream()
-                .filter { (name): Coffee ->
-                    name.contains(query)
-                }
-                .collect(Collectors.toList()))
+        lifecycleScope.launch(Dispatchers.Default) {
+            val filtered = if (query.isEmpty()) {
+                ArrayList(list)
+            } else {
+                list.filter { it.name.contains(query, ignoreCase = true) }
+            }
+            withContext(Dispatchers.Main) {
+                filteredList.clear()
+                filteredList.addAll(filtered)
+                listCoffeeAdapter.notifyDataSetChanged()
+            }
         }
-        showRecyclerList()
     }
 
     private fun filterCategory(category: String) {
-        filteredList.clear()
-        if (category == "All") {
-            filteredList.addAll(list)
-        } else {
-            filteredList.addAll(list.filter { it.category == category })
+        lifecycleScope.launch(Dispatchers.Default) {
+            val filtered = if (category == "All") {
+                ArrayList(list)
+            } else {
+                list.filter { it.category == category }
+            }
+            withContext(Dispatchers.Main) {
+                filteredList.clear()
+                filteredList.addAll(filtered)
+                listCoffeeAdapter.notifyDataSetChanged()
+            }
         }
-        showRecyclerList()
     }
-
 
     private fun getListCoffee(): ArrayList<Coffee> {
         val dataName = resources.getStringArray(R.array.data_name)
@@ -151,9 +176,9 @@ class MainActivity : AppCompatActivity() {
         val dataIngredients = resources.getStringArray(R.array.data_ingredients)
         val dataTools = resources.getStringArray(R.array.data_tools)
         val dataServingSteps = resources.getStringArray(R.array.data_serving_steps)
-        val listCoffee = ArrayList<Coffee>()
-        for (i in dataName.indices) {
-            val coffee = Coffee(
+
+        return ArrayList(dataName.indices.map { i ->
+            Coffee(
                 dataName[i],
                 dataDescription[i],
                 dataCategory[i],
@@ -162,26 +187,15 @@ class MainActivity : AppCompatActivity() {
                 dataTools[i],
                 dataServingSteps[i]
             )
-            listCoffee.add(coffee)
+        }).also {
+            dataPhoto.recycle()
         }
-        return listCoffee
-    }
-
-    private fun showRecyclerList() {
-        rvCoffee.layoutManager = GridLayoutManager(this, 2)
-        val listCoffeeAdapter = ListCoffeeAdapter(filteredList)
-        rvCoffee.adapter = listCoffeeAdapter
-
-        listCoffeeAdapter.setOnItemClickCallback(object : ListCoffeeAdapter.OnItemClickCallback {
-            override fun onDetailClicked(data: Coffee) {
-                showSelectedCoffee(data)
-            }
-        })
     }
 
     private fun showSelectedCoffee(coffee: Coffee) {
-        val intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra(DetailActivity.EXTRA_COFFEE, coffee)
+        val intent = Intent(this, DetailActivity::class.java).apply {
+            putExtra(DetailActivity.EXTRA_COFFEE, coffee)
+        }
         startActivity(intent)
     }
 }
