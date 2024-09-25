@@ -21,8 +21,8 @@ class AboutActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.back_button).setOnClickListener {
             finish()
         }
-
         findViewById<RecyclerView>(R.id.rv_about).layoutManager = LinearLayoutManager(this)
+
         loadData()
     }
 
