@@ -1,0 +1,152 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="data_name">
+        <item>Black Coffee</item>
+        <item>Palm Sugar Coffee</item>
+        <item>Dalgona Coffee</item>
+        <item>Latte</item>
+        <item>Milk Coffee</item>
+        <item>Caramel Macchiato</item>
+        <item>Tiramisu Coffee</item>
+        <item>V60 Coffee</item>
+        <item>Vietnamese Coffee</item>
+        <item>Avocado Coffee</item>
+        <item>Matcha Latte</item>
+        <item>French Press</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>This rich and bold coffee is brewed to perfection without any added milk or sugar, offering a pure, robust flavor for true coffee lovers.</item>
+        <item>Combining coffee, milk, and the natural sweetness of palm sugar, this drink features a rich caramel-like flavor that complements the boldness of the coffee.</item>
+        <item>Whipped coffee made by beating instant coffee, sugar, and hot water until fluffy, then served over cold or warm milk for a frothy, creamy treat.</item>
+        <item>Featuring a smooth layer of steamed milk over a shot of espresso, the latte creates a velvety texture and mellow flavor that’s perfect for any time of day.</item>
+        <item>Combining the boldness of coffee with the creaminess of milk, this classic beverage delivers a balanced taste for a delightful experience.</item>
+        <item>Espresso-based with steamed milk, a hint of vanilla, and a rich caramel drizzle, this indulgent drink balances bold espresso with smooth, creamy flavors.</item>
+        <item>A delightful fusion of classic coffee and the famous Italian dessert, tiramisu. This coffee combines the sweetness of cream and chocolate with the rich, smooth aroma of coffee. Perfect for those who enjoy the blend of a sweet dessert and the bold elegance of coffee.</item>
+        <item>Meticulously brewed using a V60 dripper, this pour-over coffee highlights the delicate flavors and aromas of the coffee beans with a clean and smooth finish.</item>
+        <item>Strong and sweet, this coffee is brewed with dark roasted coffee beans ground to a medium roast using a drip filter, often served with sweetened condensed milk.</item>
+        <item>This drink brings together the smooth, creamy freshness of avocado with the bold, distinctive taste of coffee. Avocado Coffee offers a unique flavor experience, where the softness of avocado perfectly complements the bittersweetness of coffee, creating a delicious and refreshing harmony.</item>
+        <item>This drink blends finely ground green tea (matcha) with steamed milk, offering a slightly sweet, refreshing, and earthy flavor that’s both energizing and soothing.</item>
+        <item>Brewed with a French press, this coffee offers a rich, full-bodied flavor with a smooth and robust taste that’s achieved through steeping coarsely ground coffee in hot water.</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/classic_black_coffee</item>
+        <item>@drawable/palm_sugar_milk_coffee</item>
+        <item>@drawable/dalgona_coffee</item>
+        <item>@drawable/latte</item>
+        <item>@drawable/classic_milk_coffee</item>
+        <item>@drawable/caramel_macchiato</item>
+        <item>@drawable/tiramisu_coffee</item>
+        <item>@drawable/v60_coffee</item>
+        <item>@drawable/vietnamese_coffee</item>
+        <item>@drawable/avocado_coffee</item>
+        <item>@drawable/matcha_latte</item>
+        <item>@drawable/frenchpress</item>
+    </integer-array>
+
+    <string-array name="data_category">
+        <item>Hot</item>
+        <item>Cold</item>
+        <item>Cold</item>
+        <item>Hot</item>
+        <item>Hot</item>
+        <item>Cold</item>
+        <item>Cold</item>
+        <item>Hot</item>
+        <item>Hot</item>
+        <item>Cold</item>
+        <item>Hot</item>
+        <item>Hot</item>
+    </string-array>
+
+    <string-array name="data_ingredients">
+        <item>1. 12g fine grind coffee (around 2 tablespoons)\n2. 200ml water\n3. 4–8g sugar(optional)</item>
+        <item>1. 12g instant coffee/coffee without grounds (around 1 tablespoons)\n2. 100ml water\n3. 30–40ml liquid palm sugar\n4. 100ml milk\n5. Ice cubes</item>
+        <item>1. 12g instant coffee/coffee without grounds (around 2 tablespoons)\n2. 12g sugar(around 2 tablespoons)\n3. 12ml water(around 2 tablespoons)\n4. 200ml milk\n5. Ice cubes</item>
+        <item>1. 12g fine grind coffee (around 2 tablespoons)\n2. 150ml hot milk\n3. 30–40ml water</item>
+        <item>1. 12g fine grind coffee (around 2 tablespoons)\n2. 100ml water\n3. 100ml hot milk</item>
+        <item>1. 12g instant coffee/coffee without grounds (around 2 tablespoons)\n2. 50ml water\n3. 30–40ml caramel syrup\n4. 150ml milk\n5. Ice cubes</item>
+        <item>1. 12g instant coffee/coffee without grounds (around 2 tablespoons)\n2. 50ml water\n3. 30–40ml tiramisu syrup\n4. 150ml milk\n5. Ice cubes</item>
+        <item>1. 12g medium grind coffee (around 2 tablespoons)\n2. 200ml water\n3. 4–8g sugar(optional)</item>
+        <item>1. 12g medium grind coffee (around 2 tablespoons)\n2. 200ml water\n3. 20–30ml sweetened condensed milk</item>
+        <item>1. 12g instant coffee/coffee without grounds (around 2 tablespoons)\n2. 50ml water\n3. ½ ripe avocado\n4. 4–8g sugar\n5. 150ml freshly milk\n6. Ice cubes</item>
+        <item>1. 12g fine grind coffee (around 2 tablespoons)\n2. 150ml hot milk\n3. 2g matcha powder\n4. 30–40ml water</item>
+        <item>1. 12g coarsely ground coffee\n2. 200ml water\n3. 4–8g sugar (optional)</item>
+    </string-array>
+
+    <string-array name="data_tools">
+        <item>1. Small pot or kettle\n2. Cup or mug\n3. Spoon</item>
+        <item>1. Small pot or kettle\n2. Collin glass\n3. Spoon</item>
+        <item>1. Bowl\n2. Hand mixer or whisk\n3. Collin glass\n4. Spoon </item>
+        <item>1. Small pot or kettle\n2. Frenchpress\n3. Milk jug\n4. Cup or mug\n5. Spoon</item>
+        <item>1. Small pot or kettle\n2. Cup or mug\n3. Spoon</item>
+        <item>1. Small pot or kettle\n2. Cup or mug\n3. Collin glass\n4. Spoon </item>
+        <item>1. Small pot or kettle\n2. Cup or mug\n3. Collin glass\n4. Spoon </item>
+        <item>1. Small pot or kettle\n2. V60 dripper\n3. Paper filter\n4. Cup or mug\n5. Spoon</item>
+        <item>1. Small pot or kettle\n2. Vietnam drip\n3. Cup or mug\n4. Spoon</item>
+        <item>1. Small pot or kettle\n2. Blender\n3. Collin glass\n4. Spoon</item>
+        <item>1. Small pot or kettle\n2. Frenchpress\n3. Milk jug\n4. Cup or mug\n5. Spoon</item>
+        <item>1. Small pot or kettle\n2. French press\n3. Cup or mug\n4. Spoon</item>
+
+    </string-array>
+
+    <string-array name="data_serving_steps">
+        <item>1. Boil 200ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling to cool slightly(to around 90–95°C)\n2. Add 12g of fine grind coffee(around 2 tablespoons)\n3. Add sugar(optional)\n4. Pour the hot water over the coffee grounds in the cup and stir with a spoon to mix well\n5. Let the coffee sit for 3–4 minutes to allow the grounds to settle at the bottom\n6. Enjoy your freshly brewed black coffee</item>
+        <item>1. Boil 100ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling to cool slightly(to around 80–85°C)\n2. 12g instant coffee/coffee without grounds(around 1 tablespoons)\n3. Pour 30–40ml of liquid palm sugar into the glass\n4. Once the milk is hot, pour it into the glass and stir with a spoon until the coffee and palm sugar are well combined\n5. Add ice cubes to the glass according to your preference\n6. Stir again until all ingredients are well mixed and the drink is cooled\n7. Enjoy your refreshing iced coffee with palm sugar</item>
+        <item>1. Mix 12g instant coffee, sugar, and water or a 1:1:1 ratio in a bowl\n2. Beat the mixture with a hand mixer or whisk until it is fluffy and foamy, until it is golden/brown in color, and very thick in texture\n3. Pour 200ml could milk into the glass\n4. Pour the shaken mixture of coffee, sugar and water over the milk\n5. Stir before drinking or enjoy straight with a layer of coffee on top of the milk.</item>
+        <item>1. Boil 30–40ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling to cool slightly(to around 90–95°C)\n2. Add 12g of fine grind coffee(around 2 tablespoons)\n3. Add sugar(optional)\n4. Pour the hot water over the coffee grounds in the cup and stir with a spoon to mix well\n5. Pour 150ml hot milk into the frenchpress\n6. Beat the milk with a French press until it reaches a height of about 1 cm from the initial height continuously\n7. make sure the foam is even (no bubbles), then pour it into a milk jug\n8. Pour the milk from the milk jug into the coffee cup at an angle with a rotating motion until the cup is half full\n9. Create your own latte art style as you wish\n10. Enjoy your homemade coffee latte</item>
+        <item>1. Boil 100ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling to cool slightly(to around 90–95°C)\n3. Add 12g of fine grind coffee(around 2 tablespoons)\n4. Pour the hot water and hot milk over the coffee grounds in the cup and stir with a spoon to mix well\n5. Let the coffee sit for 3–4 minutes to allow the grounds to settle at the bottom\n6. Enjoy your freshly milk coffee</item>
+        <item>1. Pour 150ml of milk into a collin glass\n2. Boil 50ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling until it cools down a bit (around 90–95°C)\n2. Add 12g of finely ground coffee (around 2 tablespoons) into a cup or mug\n3. Pour 50ml of boiled water into a cup or mug\n4. Stir until well mixed\n5. Add ice cubes into the collin glass of milk\n6. Stir and make sure the coldness is even\n7. Pour the coffee from the cup or mug into the collin glass\n8. Add caramel syrup on top\n9. Enjoy your homemade ice caramel macchiato</item>
+        <item>1. Pour 150ml of milk into a collin glass\n2. Boil 50ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling until it cools down a bit (around 90–95°C)\n2. Add 12g of finely ground coffee (around 2 tablespoons) into a cup or mug\n3. Pour 50ml of boiled water into a cup or mug\n4. Stir until well mixed\n5. Add ice cubes into the collin glass of milk\n6. Stir and make sure the coldness is even\n7. Pour the coffee from the cup or mug into the collin glass\n8. Add tiramisu syrup on top\n9. Enjoy your homemade ice tiramisu coffee</item>
+        <item>1. Boil water and let it cool slightly to around 85–90°C\n2. Place a V60 dripper with a paper filter on a cup or carafe and rinse the filter with hot water. Discard the rinse water\n3. Add 12g of medium grind coffee to the filter\n4. Pour a small amount of hot water over the coffee grounds to bloom for 30 seconds\n5. Slowly pour the remaining hot water over the coffee grounds in a circular motion\n6. Allow the coffee to finish dripping through the filter (total brewing time should be 3–4 minutes)\n7. Remove the dripper and discard the used grounds\n8. Stir the coffee\n9.Enjoy your freshly brewed V60 coffee</item>
+        <item>1. Boil water and let it cool slightly to around 85–90°C\n2. Pour 20–30ml of sweetened condensed milk into a cup or mug\n3. Place the Phin (Vietnam drip) filter on top of the cup\n4. Add 12g of medium grind coffee to the filter, then level the surface by shaking the filter slightly\n5. Pour a little hot water (about 20 ml) into the filter to wet the coffee and leave for 30–45 seconds for the blooming process\n6. After blooming, slowly pour the remaining hot water into the filter. Let the coffee drip slowly into the cup\n7. After all the coffee water has dripped, stir the coffee with the sweetened condensed milk until well mixed\n8. Enjoy your freshly brewed vietnamese coffee</item>
+        <item>1. Boil 50 ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling until it cools down a bit (around 90–95°C)\n2. Add 12 grams of finely ground coffee (around 2 tablespoons) into a cup or mug\n3. Pour 50 ml of boiled water into the cup or mug\n4. Stir until well blended\n5. Put the avocado, sugar and milk into a blender. Blend until smooth and creamy\n6. Pour the smoothie blender into a collin glass\n7. Pour the coffee from the cup into a collin glass (with the smoothie blender on top)\n8. Add ice cubes on top\n9. Enjoy your freshly avocado coffee</item>
+        <item>1. Boil 30–40 ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling until it cools down a bit (to around 90–95°C)\n2. Add 12 g of finely ground coffee (around 2 tablespoons)\n3. Add matcha powder\n4. Add sugar (optional)\n5. Pour the hot water over the coffee grounds in a cup and stir with a spoon until well mixed\n6. Pour 150 ml of hot milk into the French press\n7. Whisk the milk with the French press until it reaches a height of about 1 cm from the initial height continuously\n8. Make sure the foam is even (no bubbles), then pour it into the milk jug\n8. Pour the milk from the milk jug into the coffee cup using a tilted circular motion until the cup is half full\n9. Create your own latte art style\n10. Enjoy your homemade matcha latte</item>
+        <item>1. Boil 200 ml of water in a small saucepan or kettle, then let it sit for 30 seconds after boiling until it cools down a bit (around 90–95°C)\n2. Add 12 grams of coarsely ground coffee to the French press\n3. Pour the hot water over the coffee grounds and stir with a spoon\n4. Let the coffee steep for 4 minutes\n5. Press the plunger slowly and evenly\n6. Pour the coffee into a cup or mug and add sugar if desired\n7. Enjoy your freshly brewed French Press coffee</item>
+    </string-array>
+
+    <string name="about_me">About Me</string>
+    <string name="about_name">Andre Gunawan Tri Atmaja</string>
+    <string name="about_info">More Information</string>
+    <string name="description">Description</string>
+    <string name="search_here" tools:ignore="TypographyEllipsis">Search here...</string>
+    <string name="phone_number">+6281234655681</string>
+    <string name="address">Komplek Permata Buah Batu Blok F No. 51, RT 003/RW 007, Desa Lengkong, Kecamatan Bojongsoang, Bandung, Jawa Barat 40287</string>
+    <string name="address_url">https://maps.app.goo.gl/G264juU3DMRKqRXz6</string>
+    <string name="univ_url">https://maps.app.goo.gl/Wfamw3YWSxT39YDF9</string>
+    <string name="univ">Telkom University</string>
+    <string name="email" tools:ignore="Typos">andretriatmaja1@gmail.com</string>
+    <string name="instagram">\@andregtri</string>
+    <string name="instagram_url">https://www.instagram.com/andregtri</string>
+    <string name="linkedin">\@andre-gt</string>
+    <string name="linkedin_url">https://www.linkedin.com/in/andre-gt</string>
+    <string name="github">andregtproject</string>
+    <string name="github_url">https://github.com/andregtproject</string>
+    <string name="about_toast">Click on the \'More Information\' item to get detailed information!</string>
+    <string name="mailto">mailto:%1$s</string>
+    <string name="tel">tel:%1$s</string>
+
+    <string name="share_subject">Coffee Recipe by Ngopigo App: %1$s</string>
+    <string name="share_text_header">Check out this amazing coffee recipe by Ngopigo app:\n\n☕ Name: %1$s\n\n🌡️ Category: %2$s\n\n📜 Description:\n%3$s\n\n📝 Ingredients:\n%4$s\n\n🔍 Tools:\n%5$s\n\n🫖 Serving Steps:\n%6$s\n</string>
+
+    <string name="app_name">Ngopigo</string>
+    <string name="app_desc">Find your favorite brew!</string>
+
+    <string name="coffee_name">Coffee Name</string>
+    <string name="category_name">Category</string>
+    <string name="about">About</string>
+    <string name="action_share">Action Share</string>
+    <string name="serving_steps">Serving Steps</string>
+    <string name="tools">Tools</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="back_button">Back Button</string>
+    <string name="image_item">Image Item</string>
+    <string name="detail_button">Detail Button</string>
+    <string name="app_logo">App Logo</string>
+    <string name="about_page">About Page</string>
+    <string name="hot_category">Hot</string>
+    <string name="cold_category">Cold</string>
+    <string name="all_category">All</string>
+    <string name="share_chooser_title">Share Coffee Details</string>
+    <string name="share_type">text/plain</string>
+</resources>
